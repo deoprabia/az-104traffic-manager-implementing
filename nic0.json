@@ -1,0 +1,55 @@
+{
+ "name": "az104-06-nic0",
+ "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic0",
+ "etag": "W/\"3196fd27-259e-4109-8d28-365c215d3ba8\"",
+ "tags": {},
+ "properties": {
+     "provisioningState": "Succeeded",
+     "resourceGuid": "487fc7ec-3423-42e7-a1a3-8fbcf575175d",
+     "ipConfigurations": [
+         {
+             "name": "ipconfig1",
+             "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic0/ipConfigurations/ipconfig1",
+             "etag": "W/\"3196fd27-259e-4109-8d28-365c215d3ba8\"",
+             "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "privateIPAddress": "10.60.0.4",
+                 "privateIPAllocationMethod": "Dynamic",
+                 "subnet": {
+                     "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01/subnets/subnet0"
+                 },
+                 "primary": true,
+                 "privateIPAddressVersion": "IPv4",
+                 "loadBalancerBackendAddressPools": [
+                     {
+                         "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/backendAddressPools/az104-06-lb4-be1"
+                     }
+                 ]
+             }
+         }
+     ],
+     "dnsSettings": {
+         "dnsServers": [],
+         "appliedDnsServers": [],
+         "internalDomainNameSuffix": "gekmsmwskbmetfbaz5d5s55uod.bx.internal.cloudapp.net"
+     },
+     "macAddress": "00-0D-3A-9C-0E-B9",
+     "enableAcceleratedNetworking": false,
+     "vnetEncryptionSupported": false,
+     "enableIPForwarding": true,
+     "networkSecurityGroup": {
+         "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkSecurityGroups/az104-06-nsg01"
+     },
+     "primary": true,
+     "virtualMachine": {
+         "id": "/subscriptions/give-your-id/resourceGroups/az104-06-rg1/providers/Microsoft.Compute/virtualMachines/az104-06-vm0"
+     },
+     "hostedWorkloads": [],
+     "tapConfigurations": [],
+     "nicType": "Standard"
+ },
+ "type": "Microsoft.Network/networkInterfaces",
+ "location": "eastus",
+ "kind": "Regular"
+}

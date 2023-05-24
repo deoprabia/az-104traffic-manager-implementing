@@ -1,0 +1,63 @@
+{
+ "name": "az104-06-vnet01",
+ "id": "/subscriptions/giveyooourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01",
+ "etag": "W/\"dbfbfbb7-fb10-49a1-8051-cb9e2d56081d\"",
+ "type": "Microsoft.Network/virtualNetworks",
+ "location": "eastus",
+ "properties": {
+     "provisioningState": "Succeeded",
+     "resourceGuid": "32c91431-50d2-4958-9420-cfc7f97ff473",
+     "addressSpace": {
+         "addressPrefixes": [
+             "10.60.0.0/22"
+         ]
+     },
+     "subnets": [
+         {
+             "name": "subnet0",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01/subnets/subnet0",
+             "etag": "W/\"dbfbfbb7-fb10-49a1-8051-cb9e2d56081d\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "addressPrefix": "10.60.0.0/24",
+                 "ipConfigurations": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic0/ipConfigurations/ipconfig1"
+                     }
+                 ]
+             },
+             "type": "Microsoft.Network/virtualNetworks/subnets"
+         },
+         {
+             "name": "subnet1",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01/subnets/subnet1",
+             "etag": "W/\"dbfbfbb7-fb10-49a1-8051-cb9e2d56081d\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "addressPrefix": "10.60.1.0/24",
+                 "ipConfigurations": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic1/ipConfigurations/ipconfig1"
+                     }
+                 ]
+             },
+             "type": "Microsoft.Network/virtualNetworks/subnets"
+         },
+         {
+             "name": "subnet-appgw",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01/subnets/subnet-appgw",
+             "etag": "W/\"dbfbfbb7-fb10-49a1-8051-cb9e2d56081d\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "addressPrefix": "10.60.3.224/27",
+                 "applicationGatewayIPConfigurations": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/gatewayIPConfigurations/appGatewayIpConfig"
+                     }
+                 ]
+             },
+             "type": "Microsoft.Network/virtualNetworks/subnets"
+         }
+     ]
+ }
+}

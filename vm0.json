@@ -1,0 +1,90 @@
+{
+ "name": "az104-06-vm0",
+ "id": "/subscriptions/giveyoursubid/resourceGroups/az104-06-rg1/providers/Microsoft.Compute/virtualMachines/az104-06-vm0",
+ "type": "Microsoft.Compute/virtualMachines",
+ "location": "eastus",
+ "properties": {
+     "vmId": "f4db3d0a-a7e2-4c7d-8eaa-6c86e9bda54c",
+     "hardwareProfile": {
+         "vmSize": "Standard_D2s_v3"
+     },
+     "storageProfile": {
+         "imageReference": {
+             "publisher": "MicrosoftWindowsServer",
+             "offer": "WindowsServer",
+             "sku": "2019-Datacenter",
+             "version": "latest",
+             "exactVersion": "17763.4377.230505"
+         },
+         "osDisk": {
+             "osType": "Windows",
+             "name": "az104-06-vm0_disk1_e0f2d0e8b1584be7aa5291e52ad47dc1",
+             "createOption": "FromImage",
+             "caching": "ReadWrite",
+             "managedDisk": {
+                 "storageAccountType": "Premium_LRS",
+                 "id": "/subscriptions/giveyoursubid/resourceGroups/AZ104-06-RG1/providers/Microsoft.Compute/disks/az104-06-vm0_disk1_e0f2d0e8b1584be7aa5291e52ad47dc1"
+             },
+             "deleteOption": "Detach",
+             "diskSizeGB": 127
+         },
+         "dataDisks": []
+     },
+     "osProfile": {
+         "computerName": "az104-06-vm0",
+         "adminUsername": "Student",
+         "windowsConfiguration": {
+             "provisionVMAgent": true,
+             "enableAutomaticUpdates": true,
+             "patchSettings": {
+                 "patchMode": "AutomaticByOS",
+                 "assessmentMode": "ImageDefault"
+             }
+         },
+         "secrets": [],
+         "allowExtensionOperations": true
+     },
+     "networkProfile": {
+         "networkInterfaces": [
+             {
+                 "id": "/subscriptions/giveyoursubid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic0",
+                 "properties": {
+                     "primary": true
+                 }
+             }
+         ]
+     },
+     "provisioningState": "Succeeded"
+ },
+ "resources": [
+     {
+         "name": "customScriptExtension",
+         "id": "/subscriptions/giveyoursubid/resourceGroups/az104-06-rg1/providers/Microsoft.Compute/virtualMachines/az104-06-vm0/extensions/customScriptExtension",
+         "type": "Microsoft.Compute/virtualMachines/extensions",
+         "location": "eastus",
+         "properties": {
+             "autoUpgradeMinorVersion": true,
+             "provisioningState": "Succeeded",
+             "publisher": "Microsoft.Compute",
+             "type": "CustomScriptExtension",
+             "typeHandlerVersion": "1.7",
+             "settings": {
+                 "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+             }
+         }
+     },
+     {
+         "name": "networkWatcherAgent",
+         "id": "/subscriptions/giveyoursubid/resourceGroups/az104-06-rg1/providers/Microsoft.Compute/virtualMachines/az104-06-vm0/extensions/networkWatcherAgent",
+         "type": "Microsoft.Compute/virtualMachines/extensions",
+         "location": "eastus",
+         "properties": {
+             "autoUpgradeMinorVersion": true,
+             "provisioningState": "Succeeded",
+             "publisher": "Microsoft.Azure.NetworkWatcher",
+             "type": "NetworkWatcherAgentWindows",
+             "typeHandlerVersion": "1.4"
+         }
+     }
+ ]
+}

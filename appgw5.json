@@ -1,0 +1,164 @@
+{
+    "name": "az104-06-appgw5",
+    "id": "/subscriptions/1/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5",
+    "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+    "type": "Microsoft.Network/applicationGateways",
+    "location": "eastus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "",
+        "sku": {
+            "name": "Standard_v2",
+            "tier": "Standard_v2",
+            "capacity": 2
+        },
+        "operationalState": "Running",
+        "gatewayIPConfigurations": [
+            {
+                "name": "appGatewayIpConfig",
+                "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/gatewayIPConfigurations/appGatewayIpConfig",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "subnet": {
+                        "id": "/subscriptions/ce1/resourceGroups/az104-06-rg1/providers/Microsoft.Network/virtualNetworks/az104-06-vnet01/subnets/subnet-appgw"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+            }
+        ],
+        "sslCertificates": [],
+        "frontendIPConfigurations": [
+            {
+                "name": "appGwPublicFrontendIpIPv4",
+                "id": "/subscriptions//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/frontendIPConfigurations/appGwPublicFrontendIpIPv4",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/ce/resourceGroups/az104-06-rg5/providers/Microsoft.Network/publicIPAddresses/az104-06-pip5"
+                    },
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/c1/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/httpListeners/az104-06-appgw5-rl1l1"
+                        }
+                    ]
+                }
+            }
+        ],
+        "frontendPorts": [
+            {
+                "name": "port_80",
+                "id": "/subscriptions/ce1/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/frontendPorts/port_80",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "httpListeners": [
+                        {
+                            "id": "//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/httpListeners/az104-06-appgw5-rl1l1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "az104-06-appgw5-be1",
+                "id": "/subscriptions//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/backendAddressPools/az104-06-appgw5-be1",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "backendAddresses": [
+                        {
+                            "ipAddress": "10.62.0.4"
+                        },
+                        {
+                            "ipAddress": "10.63.0.4"
+                        }
+                    ],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/c/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/requestRoutingRules/az104-06-appgw5-rl1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+            }
+        ],
+        "backendHttpSettingsCollection": [
+            {
+                "name": "az104-06-appgw5-http1",
+                "id": "/subscriptions/c/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/backendHttpSettingsCollection/az104-06-appgw5-http1",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "protocol": "Http",
+                    "cookieBasedAffinity": "Disabled",
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/b1/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/requestRoutingRules/az104-06-appgw5-rl1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            }
+        ],
+        "httpListeners": [
+            {
+                "name": "az104-06-appgw5-rl1l1",
+                "id": "/subscriptions//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/httpListeners/az104-06-appgw5-rl1l1",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/frontendIPConfigurations/appGwPublicFrontendIpIPv4"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/frontendPorts/port_80"
+                    },
+                    "protocol": "Http",
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions//resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/requestRoutingRules/az104-06-appgw5-rl1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+            {
+                "name": "az104-06-appgw5-rl1",
+                "id": "/subscriptions/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/requestRoutingRules/az104-06-appgw5-rl1",
+                "etag": "W/\"c814f873-e870-4584-8b20-31b52400f407\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/httpListeners/az104-06-appgw5-rl1l1"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/backendAddressPools/az104-06-appgw5-be1"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/resourceGroups/az104-06-rg5/providers/Microsoft.Network/applicationGateways/az104-06-appgw5/backendHttpSettingsCollection/az104-06-appgw5-http1"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            }
+        ],
+        "probes": [],
+        "redirectConfigurations": [],
+        "enableHttp2": false
+    }
+}

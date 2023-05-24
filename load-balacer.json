@@ -1,0 +1,108 @@
+{
+ "name": "az104-06-lb4",
+ "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4",
+ "etag": "W/\"0c20658f-9986-48b6-8c4b-81f489bb3b37\"",
+ "type": "Microsoft.Network/loadBalancers",
+ "location": "eastus",
+ "tags": {},
+ "properties": {
+     "provisioningState": "Succeeded",
+     "resourceGuid": "d15ee161-d7e0-4316-8b1a-f78790dfc9b1",
+     "frontendIPConfigurations": [
+         {
+             "name": "az104-06-fe4",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/frontendIPConfigurations/az104-06-fe4",
+             "etag": "W/\"0c20658f-9986-48b6-8c4b-81f489bb3b37\"",
+             "type": "Microsoft.Network/loadBalancers/frontendIPConfigurations",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "privateIPAllocationMethod": "Dynamic",
+                 "publicIPAddress": {
+                     "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/publicIPAddresses/az104-06-pip4"
+                 },
+                 "loadBalancingRules": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/loadBalancingRules/az104-06-lb4-lbrule1"
+                     }
+                 ]
+             }
+         }
+     ],
+     "backendAddressPools": [
+         {
+             "name": "az104-06-lb4-be1",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/backendAddressPools/az104-06-lb4-be1",
+             "etag": "W/\"0c20658f-9986-48b6-8c4b-81f489bb3b37\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "backendIPConfigurations": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic0/ipConfigurations/ipconfig1"
+                     },
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/networkInterfaces/az104-06-nic1/ipConfigurations/ipconfig1"
+                     }
+                 ],
+                 "loadBalancingRules": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/loadBalancingRules/az104-06-lb4-lbrule1"
+                     }
+                 ]
+             },
+             "type": "Microsoft.Network/loadBalancers/backendAddressPools"
+         }
+     ],
+     "loadBalancingRules": [
+         {
+             "name": "az104-06-lb4-lbrule1",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/loadBalancingRules/az104-06-lb4-lbrule1",
+             "etag": "W/\"0c20658f-9986-48b6-8c4b-81f489bb3b37\"",
+             "type": "Microsoft.Network/loadBalancers/loadBalancingRules",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "frontendIPConfiguration": {
+                     "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/frontendIPConfigurations/az104-06-fe4"
+                 },
+                 "frontendPort": 80,
+                 "backendPort": 80,
+                 "enableFloatingIP": false,
+                 "idleTimeoutInMinutes": 4,
+                 "protocol": "Tcp",
+                 "loadDistribution": "Default",
+                 "disableOutboundSnat": true,
+                 "backendAddressPool": {
+                     "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/backendAddressPools/az104-06-lb4-be1"
+                 },
+                 "probe": {
+                     "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/probes/az104-06-lb4-hp1"
+                 }
+             }
+         }
+     ],
+     "probes": [
+         {
+             "name": "az104-06-lb4-hp1",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/probes/az104-06-lb4-hp1",
+             "etag": "W/\"0c20658f-9986-48b6-8c4b-81f489bb3b37\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "protocol": "Tcp",
+                 "port": 80,
+                 "intervalInSeconds": 5,
+                 "numberOfProbes": 1,
+                 "loadBalancingRules": [
+                     {
+                         "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4/loadBalancingRules/az104-06-lb4-lbrule1"
+                     }
+                 ]
+             },
+             "type": "Microsoft.Network/loadBalancers/probes"
+         }
+     ],
+     "inboundNatRules": [],
+     "inboundNatPools": []
+ },
+ "sku": {
+     "name": "Standard"
+ }
+}

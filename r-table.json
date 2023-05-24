@@ -1,0 +1,27 @@
+{
+ "name": "az104-06-rt23",
+ "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/routeTables/az104-06-rt23",
+ "etag": "W/\"b8279143-95e4-4d88-bef5-4da706854a08\"",
+ "type": "Microsoft.Network/routeTables",
+ "location": "eastus2",
+ "tags": {},
+ "properties": {
+     "provisioningState": "Succeeded",
+     "resourceGuid": "b17fe5d7-4e88-45ce-8232-1b5451c6fcc2",
+     "disableBgpRoutePropagation": true,
+     "routes": [
+         {
+             "name": "az104-06-route-vnet2-to-vnet3",
+             "id": "/subscriptions/giveyourid/resourceGroups/az104-06-rg1/providers/Microsoft.Network/routeTables/az104-06-rt23/routes/az104-06-route-vnet2-to-vnet3",
+             "etag": "W/\"b8279143-95e4-4d88-bef5-4da706854a08\"",
+             "properties": {
+                 "provisioningState": "Succeeded",
+                 "addressPrefix": "10.63.0.0/20",
+                 "nextHopType": "VirtualAppliance",
+                 "nextHopIpAddress": "10.60.0.4"
+             },
+             "type": "Microsoft.Network/routeTables/routes"
+         }
+     ]
+ }
+}
